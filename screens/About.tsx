@@ -8,12 +8,12 @@ import { BottomTabScreenProps } from '../navigation/types'
 
 const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
   <>
-    <HStack bg="primary.500" safeAreaTop alignItems="center" pr="50px">
+    <HStack bg="primary.500" safeAreaTop pr="50px" alignItems="center">
       <IconButton
         icon={<Icon name="arrow-left" color="white" size="xl" />}
         onPress={() => navigation.navigate('Calculate')}
       />
-      <Heading flex={1} textAlign="center" color="white" isTruncated>
+      <Heading flex={1} textAlign="center" color="white">
         About
       </Heading>
     </HStack>

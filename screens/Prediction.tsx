@@ -6,7 +6,7 @@ const Prediction = ({
   route,
 }: RootStackScreenProps<'Prediction'>) => (
   <>
-    <HStack bg="primary.500" pr="50px">
+    <HStack safeAreaTop bg="primary.500" pr="50px">
       <IconButton
         icon={<Icon name="arrow-left" color="white" size="xl" />}
         onPress={() => navigation.navigate('Calculate')}
