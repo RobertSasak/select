@@ -29,7 +29,7 @@ export type BottomTabParamList = {
   Contact: undefined
 }
 
-export type RootTabScreenProps<Screen extends keyof BottomTabParamList> =
+export type BottomTabScreenProps<Screen extends keyof BottomTabParamList> =
   CompositeScreenProps<
     BottomTabScreenProps<BottomTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>

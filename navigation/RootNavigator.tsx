@@ -13,10 +13,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 const RootNavigator = () => (
   <Stack.Navigator>
     <Stack.Group screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Calculate" component={Calculate} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
-      <Stack.Screen name="Calculate" component={Calculate} />
       <Stack.Screen name="Prediction" component={Prediction} />
       <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} />
