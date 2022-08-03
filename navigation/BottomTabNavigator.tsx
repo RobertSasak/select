@@ -5,7 +5,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import About from '../screens/About'
 import Contact from '../screens/Contact'
 import { BottomTabParamList } from './types'
-import { theme } from '../NativeBase'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
@@ -15,7 +14,6 @@ const BottomTabNavigator = () => {
       screenOptions={{
         tabBarLabelPosition: 'below-icon',
         headerShown: false,
-        tabBarActiveTintColor: theme.colors.primary[500],
         tabBarLabelStyle: { fontWeight: '500' },
       }}
     >

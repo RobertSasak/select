@@ -10,6 +10,21 @@ const linking: LinkingOptions<RootStackParamList> = {
       Calculate: {
         path: '',
       },
+      P1: {
+        path: 'severity-of-stroke',
+      },
+      P2: {
+        path: 'large-artery-atherosclerosis',
+      },
+      P3: {
+        path: 'early-seizure',
+      },
+      P4: {
+        path: 'cortical involvement',
+      },
+      P5: {
+        path: 'territory-of-mca-involvement',
+      },
       Prediction: {
         path: 'prediction/:score',
       },

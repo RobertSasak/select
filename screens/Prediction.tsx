@@ -1,4 +1,4 @@
-import { Heading, Text, IconButton, Icon, HStack } from 'native-base'
+import { Heading, IconButton, Icon, HStack } from 'native-base'
 import { RootStackScreenProps } from '../navigation/types'
 
 const Prediction = ({

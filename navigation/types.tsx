@@ -1,4 +1,4 @@
-import { BottomTabScreenProps } from '@react-navigation/bottom-tabs'
+import { BottomTabScreenProps as RNBottomTabScreenProps } from '@react-navigation/bottom-tabs'
 import {
   CompositeScreenProps,
   NavigatorScreenParams,
@@ -13,6 +13,11 @@ declare global {
 
 export type RootStackParamList = {
   Calculate: undefined
+  P1: undefined
+  P2: undefined
+  P3: undefined
+  P4: undefined
+  P5: undefined
   Prediction: {
     score: number
   }
@@ -31,6 +36,6 @@ export type BottomTabParamList = {
 
 export type BottomTabScreenProps<Screen extends keyof BottomTabParamList> =
   CompositeScreenProps<
-    BottomTabScreenProps<BottomTabParamList, Screen>,
+    RNBottomTabScreenProps<BottomTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>
   >

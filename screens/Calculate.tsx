@@ -37,7 +37,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             letter="SE"
             title="verity of stroke"
             subTitle="NIHSS at admission"
-            onPress={() => navigation.navigate('Calculate')}
+            onPress={() => navigation.navigate('P1')}
           />
           <Segment
             options={[
@@ -52,7 +52,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
           <Label
             letter="L"
             title="arge-artery atherosclerosis"
-            onPress={() => navigation.navigate('Calculate')}
+            onPress={() => navigation.navigate('P2')}
           />
           <Segment
             options={[
@@ -68,7 +68,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             letter="E"
             title="arly seizure"
             subTitle="≤ 7 days after stroke"
-            onPress={() => navigation.navigate('Calculate')}
+            onPress={() => navigation.navigate('P3')}
           />
           <Segment
             options={[
@@ -83,7 +83,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
           <Label
             letter="C"
             title="ortical involvement"
-            onPress={() => navigation.navigate('Calculate')}
+            onPress={() => navigation.navigate('P4')}
           />
           <Segment
             options={[
@@ -97,7 +97,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
           <Label
             letter="T"
             title="erritory of MCA involvement"
-            onPress={() => navigation.navigate('Calculate')}
+            onPress={() => navigation.navigate('P5')}
           />
           <Segment
             options={[
