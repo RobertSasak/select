@@ -18,6 +18,7 @@ export type RootStackParamList = {
   P3: undefined
   P4: undefined
   P5: undefined
+  Risk: undefined
   Prediction: {
     score: number
   }

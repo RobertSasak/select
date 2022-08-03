@@ -6,7 +6,6 @@ import {
   IconButton,
   ScrollView,
   VStack,
-  Text,
 } from 'native-base'
 
 import { BottomTabScreenProps } from '../navigation/types'

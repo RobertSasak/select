@@ -16,6 +16,7 @@ const Segment = ({ options, selected, onPress }: SegmentProps) => (
   <Button.Group isAttached flex={1}>
     {options.map(({ label, value }) => (
       <Button
+        key={value}
         flexGrow={1}
         variant={value === selected ? 'solid' : 'outline'}
         onPress={() => onPress(value)}

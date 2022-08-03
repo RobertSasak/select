@@ -11,7 +11,7 @@ import {
 import { RootStackScreenProps } from '../navigation/types'
 import Label from '../components/Label'
 import { useStatePersist } from 'use-state-persist'
-import Segment from '../components/Option'
+import Segment from '../components/Segment'
 import Hr from '../components/Hr'
 
 const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {

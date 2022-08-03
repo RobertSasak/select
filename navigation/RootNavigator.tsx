@@ -12,6 +12,7 @@ import P2 from '../screens/P2'
 import P3 from '../screens/P3'
 import P4 from '../screens/P4'
 import P5 from '../screens/P5'
+import Risk from '../screens/Risk'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
@@ -24,6 +25,7 @@ const RootNavigator = () => (
       <Stack.Screen name="P3" component={P3} />
       <Stack.Screen name="P4" component={P4} />
       <Stack.Screen name="P5" component={P5} />
+      <Stack.Screen name="Risk" component={Risk} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
