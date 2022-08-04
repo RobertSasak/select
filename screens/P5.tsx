@@ -1,12 +1,19 @@
 import React from 'react'
-import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
+import {
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  ScrollView,
+} from 'native-base'
 
 import B from '../components/B'
 import P from '../components/P'
 
-import { BottomTabScreenProps } from '../navigation/types'
+import { RootStackScreenProps } from '../navigation/types'
 
-const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
+const P5 = ({ navigation }: RootStackScreenProps<'P5'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop pr="50px" alignItems="center">
       <IconButton
@@ -36,11 +43,13 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         Reference
       </Heading>
       <P>
-        Tatu L, Moulin T, Bogousslavsky J, Duvernoy H. Arterial territories of
-        the human brain: cerebral hemispheres. Neurology 1998; 50: 1699-1708.
+        <Link href="https://n.neurology.org/content/47/5/1125.short">
+          Tatu L, Moulin T, Bogousslavsky J, Duvernoy H. Arterial territories of
+          the human brain: cerebral hemispheres. Neurology 1998; 50: 1699-1708.
+        </Link>
       </P>
     </ScrollView>
   </>
 )
 
-export default About
+export default P5

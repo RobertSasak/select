@@ -1,4 +1,11 @@
-import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
+import {
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  ScrollView,
+} from 'native-base'
 
 import Hr from '../components/Hr'
 import Li from '../components/Li'
@@ -70,10 +77,12 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         Reference manuscript:
       </Heading>
       <P>
-        Galovic M, Döhler N, Erdélyi-Canavese B, et al. Prediction of late
-        seizures after ischaemic stroke with a novel prognostic model (the
-        SeLECT score): a multivariable prediction model development and
-        validation study. The Lancet Neurology 2018; 17: 143-52.
+        <Link href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(17)30404-0/fulltext">
+          Galovic M, Döhler N, Erdélyi-Canavese B, et al. Prediction of late
+          seizures after ischaemic stroke with a novel prognostic model (the
+          SeLECT score): a multivariable prediction model development and
+          validation study. The Lancet Neurology 2018; 17: 143-52.
+        </Link>
       </P>
     </ScrollView>
   </>

@@ -1,13 +1,20 @@
 import React from 'react'
-import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
+import {
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  ScrollView,
+} from 'native-base'
 
 import B from '../components/B'
 import Li from '../components/Li'
 import P from '../components/P'
 
-import { BottomTabScreenProps } from '../navigation/types'
+import { RootStackScreenProps } from '../navigation/types'
 
-const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
+const P2 = ({ navigation }: RootStackScreenProps<'P2'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop alignItems="center">
       <IconButton
@@ -64,13 +71,15 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         Reference
       </Heading>
       <P>
-        Adams HP, Bendixen BH, Kappelle LJ, Biller J, Love BB, Gordon DL, et al.
-        Classification of subtype of acute ischemic stroke. Definitions for use
-        in a multicenter clinical trial. TOAST. Trial of Org 10172 in Acute
-        Stroke Treatment. Stroke 1993; 24: 35-41.
+        <Link href="https://www.ahajournals.org/doi/abs/10.1161/01.str.24.1.35">
+          Adams HP, Bendixen BH, Kappelle LJ, Biller J, Love BB, Gordon DL, et
+          al. Classification of subtype of acute ischemic stroke. Definitions
+          for use in a multicenter clinical trial. TOAST. Trial of Org 10172 in
+          Acute Stroke Treatment. Stroke 1993; 24: 35-41.
+        </Link>
       </P>
     </ScrollView>
   </>
 )
 
-export default About
+export default P2

@@ -12,9 +12,9 @@ import {
 import B from '../components/B'
 import P from '../components/P'
 
-import { BottomTabScreenProps } from '../navigation/types'
+import { RootStackScreenProps } from '../navigation/types'
 
-const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
+const P1 = ({ navigation }: RootStackScreenProps<'P1'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop pr="50px" alignItems="center">
       <IconButton
@@ -46,4 +46,4 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
   </>
 )
 
-export default About
+export default P1

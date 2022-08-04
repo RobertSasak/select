@@ -58,7 +58,7 @@ const Prediction = ({
       </HStack>
       <Chart
         style={{ height: '100%', maxHeight: 300, width: '100%' }}
-        padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
+        padding={{ left: 40, bottom: 20, right: 20, top: 40 }}
         xDomain={{ min: 0, max: 60 }}
         yDomain={{ min: 0, max: 100 }}
       >
@@ -93,9 +93,13 @@ const Prediction = ({
           tooltipComponent={
             <Tooltip
               theme={{
+                label: {
+                  dy: 20,
+                },
                 shape: {
+                  dy: 25,
                   width: 120,
-                  height: 40,
+                  height: 30,
                   color: 'rgba(0,0,0,.7)',
                 },
                 formatter: ({ x, y }) =>

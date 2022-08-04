@@ -1,12 +1,19 @@
 import React from 'react'
-import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
+import {
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  ScrollView,
+} from 'native-base'
 
 import B from '../components/B'
 import P from '../components/P'
 
-import { BottomTabScreenProps } from '../navigation/types'
+import { RootStackScreenProps } from '../navigation/types'
 
-const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
+const P3 = ({ navigation }: RootStackScreenProps<'P3'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop pr="50px" alignItems="center">
       <IconButton
@@ -25,12 +32,14 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
       </P>
       <Heading>Reference</Heading>
       <P>
-        Beghi E, Carpio A, Forsgren L, Hesdorffer DC, Malmgren K, Sander JW, et
-        al. Recommendation for a definition of acute symptomatic seizure.
-        Epilepsia 2010; 51: 671-675.
+        <Link href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1528-1167.2009.02285.x">
+          Beghi E, Carpio A, Forsgren L, Hesdorffer DC, Malmgren K, Sander JW,
+          et al. Recommendation for a definition of acute symptomatic seizure.
+          Epilepsia 2010; 51: 671-675.
+        </Link>
       </P>
     </ScrollView>
   </>
 )
 
-export default About
+export default P3
