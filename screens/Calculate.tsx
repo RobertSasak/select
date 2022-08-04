@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Heading,
   Button,
@@ -6,13 +7,15 @@ import {
   Icon,
   ScrollView,
   Box,
+  Modal,
 } from 'native-base'
+import { useStatePersist } from 'use-state-persist'
 
 import { RootStackScreenProps } from '../navigation/types'
 import Label from '../components/Label'
-import { useStatePersist } from 'use-state-persist'
 import Segment from '../components/Segment'
 import Hr from '../components/Hr'
+import P from '../components/P'
 
 const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
   const [p1, setP1] = useStatePersist('p1', 0)
@@ -20,8 +23,43 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
   const [p3, setP3] = useStatePersist('p3', 0)
   const [p4, setP4] = useStatePersist('p4', 0)
   const [p5, setP5] = useStatePersist('p5', 0)
+
+  const [termsVisible, setTermsVisible] = useStatePersist('terms', true)
+
   return (
     <>
+      <Modal isOpen={termsVisible} onClose={() => setTermsVisible(false)}>
+        <Modal.Content>
+          <Modal.Header>Terms &amp; Conditions</Modal.Header>
+          <Modal.Body>
+            <P>
+              The SeLECT score is a prediction tool applicable to people who
+              suffered an ischemic stroke. Given some clinical characteristics,
+              it provides risk estimates of late seizures occurring &gt; 7 days
+              after stroke.
+            </P>
+            <P>
+              This tool is meant to be used only by medical professionals to
+              improve prognostication of late seizures after stroke. Its
+              clinical usefulness to influence medical decisions has not been
+              tested.
+            </P>
+            <P>
+              By accepting these terms, the user agrees on the nature and
+              purpose of this prediction tool.
+            </P>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              leftIcon={<Icon name="check" />}
+              onPress={() => setTermsVisible(false)}
+            >
+              Accept Terms &amp; Conditions
+            </Button>
+          </Modal.Footer>
+        </Modal.Content>
+      </Modal>
+
       <HStack bg="primary.500" safeAreaTop pl="50px" alignItems={'center'}>
         <Heading color="white" flex={1} textAlign="center">
           Calculate

@@ -23,7 +23,7 @@ export type RootStackParamList = {
     score: number
   }
   BottomTab: NavigatorScreenParams<BottomTabParamList> | undefined
-  Modal: undefined
+  Terms: undefined
   NotFound: undefined
 }
 

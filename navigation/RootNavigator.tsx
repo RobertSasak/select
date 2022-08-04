@@ -1,7 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import ModalScreen from '../screens/ModalScreen'
 import Calculate from '../screens/Calculate'
 import Prediction from '../screens/Prediction'
 import BottomTabNavigator from './BottomTabNavigator'
@@ -26,9 +25,6 @@ const RootNavigator = () => (
       <Stack.Screen name="P4" component={P4} />
       <Stack.Screen name="P5" component={P5} />
       <Stack.Screen name="Risk" component={Risk} />
-      <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
-      </Stack.Group>
       <Stack.Screen name="Prediction" component={Prediction} />
       <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} />
