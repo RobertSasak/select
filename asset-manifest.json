@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/select/static/js/app.bd43a81c.chunk.js",
-    "app.js.map": "/select/static/js/app.bd43a81c.chunk.js.map",
+    "app.js": "/select/static/js/app.5df21706.chunk.js",
+    "app.js.map": "/select/static/js/app.5df21706.chunk.js.map",
     "runtime~app.js": "/select/static/js/runtime~app.1a2ef8ed.js",
     "runtime~app.js.map": "/select/static/js/runtime~app.1a2ef8ed.js.map",
-    "static/js/2.150d6dff.chunk.js": "/select/static/js/2.150d6dff.chunk.js",
-    "static/js/2.150d6dff.chunk.js.map": "/select/static/js/2.150d6dff.chunk.js.map",
+    "static/js/2.cb7e8d73.chunk.js": "/select/static/js/2.cb7e8d73.chunk.js",
+    "static/js/2.cb7e8d73.chunk.js.map": "/select/static/js/2.cb7e8d73.chunk.js.map",
     "fonts/AntDesign.ttf": "/select/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/select/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/select/./fonts/Feather.ttf",
@@ -24,12 +24,12 @@
     "index.html": "/select/index.html",
     "manifest.json": "/select/manifest.json",
     "serve.json": "/select/serve.json",
-    "static/js/2.150d6dff.chunk.js.LICENSE.txt": "/select/static/js/2.150d6dff.chunk.js.LICENSE.txt",
+    "static/js/2.cb7e8d73.chunk.js.LICENSE.txt": "/select/static/js/2.cb7e8d73.chunk.js.LICENSE.txt",
     "static/media/p1.jpeg": "/select/static/media/p1.e19be01f.jpeg"
   },
   "entrypoints": [
     "static/js/runtime~app.1a2ef8ed.js",
-    "static/js/2.150d6dff.chunk.js",
-    "static/js/app.bd43a81c.chunk.js"
+    "static/js/2.cb7e8d73.chunk.js",
+    "static/js/app.5df21706.chunk.js"
   ]
 }
