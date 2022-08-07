@@ -3,7 +3,7 @@ import { Icon } from 'native-base'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import About from '../screens/About'
-import Contact from '../screens/Contact'
+import Terms from '../screens/Terms'
 import { BottomTabParamList } from './types'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
@@ -27,11 +27,11 @@ const BottomTabNavigator = () => {
         }}
       />
       <BottomTab.Screen
-        name="Contact"
-        component={Contact}
+        name="Terms"
+        component={Terms}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon name="account-multiple" color={color} size="xl" />
+            <Icon name="file-document-outline" color={color} size="xl" />
           ),
         }}
       />

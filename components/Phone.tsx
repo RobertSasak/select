@@ -14,12 +14,12 @@ const Phone = ({ children }: { children: React.ReactNode }) => {
         borderColor="gray.700"
         overflow="clip"
         shadow={9}
-        mt="50px"
         w="100%"
-        maxW={[null, 480]}
-        maxH={[null, 780]}
-        borderRadius={[null, 30]}
-        borderWidth={[null, 10]}
+        mt={[0, 0, '50px']}
+        maxW={[null, null, 768]}
+        maxH={[null, null, 780]}
+        borderWidth={[null, null, 10]}
+        borderRadius={30}
         alignSelf="center"
       >
         {children}

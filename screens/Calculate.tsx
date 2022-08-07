@@ -69,7 +69,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
           onPress={() => navigation.navigate('BottomTab', { screen: 'About' })}
         />
       </HStack>
-      <ScrollView px="5">
+      <ScrollView px="5" pb="5">
         <Box safeAreaBottom>
           <Label
             letter="SE"

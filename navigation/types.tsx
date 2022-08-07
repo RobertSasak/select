@@ -32,7 +32,7 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
 
 export type BottomTabParamList = {
   About: undefined
-  Contact: undefined
+  Terms: undefined
 }
 
 export type BottomTabScreenProps<Screen extends keyof BottomTabParamList> =

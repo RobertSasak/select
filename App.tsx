@@ -13,7 +13,7 @@ const App = () => (
       <SafeAreaProvider>
         <Phone>
           <Navigation />
-          <StatusBar />
+          <StatusBar style="light" />
         </Phone>
       </SafeAreaProvider>
     </NativeBase>

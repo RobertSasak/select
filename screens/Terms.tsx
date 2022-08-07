@@ -11,7 +11,7 @@ import {
 import { BottomTabScreenProps } from '../navigation/types'
 import P from '../components/P'
 
-const Contact = ({ navigation }: BottomTabScreenProps<'Contact'>) => (
+const Terms = ({ navigation }: BottomTabScreenProps<'Terms'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop alignItems="center" pr="50px">
       <IconButton
@@ -19,7 +19,7 @@ const Contact = ({ navigation }: BottomTabScreenProps<'Contact'>) => (
         onPress={() => navigation.navigate('Calculate')}
       />
       <Heading flex={1} textAlign="center" color="white" isTruncated>
-        Contact
+        Terms
       </Heading>
     </HStack>
     <ScrollView p="5">
@@ -41,4 +41,4 @@ const Contact = ({ navigation }: BottomTabScreenProps<'Contact'>) => (
   </>
 )
 
-export default Contact
+export default Terms
