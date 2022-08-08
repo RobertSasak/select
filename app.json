@@ -26,6 +26,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "versionCode": 100031,
       "package": "sk.sasak.select"
     },
     "web": {
