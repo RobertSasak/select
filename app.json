@@ -3,7 +3,7 @@
     "name": "select",
     "slug": "select",
     "owner": "galovic",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -26,7 +26,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "versionCode": 100032,
+      "versionCode": 100033,
       "package": "sk.sasak.select"
     },
     "web": {

@@ -76,14 +76,15 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
       <Heading size="md" py="2">
         Reference manuscript:
       </Heading>
-      <P>
-        <Link href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(17)30404-0/fulltext">
-          Galovic M, Döhler N, Erdélyi-Canavese B, et al. Prediction of late
-          seizures after ischaemic stroke with a novel prognostic model (the
-          SeLECT score): a multivariable prediction model development and
-          validation study. The Lancet Neurology 2018; 17: 143-52.
-        </Link>
-      </P>
+      <Link
+        mb="5"
+        href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(17)30404-0/fulltext"
+      >
+        Galovic M, Döhler N, Erdélyi-Canavese B, et al. Prediction of late
+        seizures after ischaemic stroke with a novel prognostic model (the
+        SeLECT score): a multivariable prediction model development and
+        validation study. The Lancet Neurology 2018; 17: 143-52.
+      </Link>
     </ScrollView>
   </>
 )

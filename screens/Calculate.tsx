@@ -16,7 +16,6 @@ import Label from '../components/Label'
 import Segment from '../components/Segment'
 import Hr from '../components/Hr'
 import P from '../components/P'
-import Svg, { Circle } from 'react-native-svg'
 
 const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
   const [p1, setP1] = useStatePersist('p1', 0)
@@ -72,23 +71,6 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
         />
       </HStack>
       <ScrollView px="5" pb="5">
-        <Svg width={100} height={100} style={{ backgroundColor: 'gray' }}>
-          {/* Works on Web */}
-          <Circle r="10" fill="red" translate={[10, 50]} />
-          <Circle r="10" fill="pink" transform="translate(20,50)" />
-          {/* Does not work on Web, but works on iOS */}
-          <Circle r="10" fill="green" translateX={30} translateY={50} />
-          <Circle r="10" fill="blue" transform={{ translate: [40, 50] }} />
-          <Circle
-            r="10"
-            fill="yellow"
-            transform={{
-              translateX: 50,
-              translateY: 50,
-            }}
-          />
-        </Svg>
-
         <Box safeAreaBottom>
           <Label
             letter="SE"
@@ -119,7 +101,6 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             selected={p2}
             onPress={setP2}
           />
-
           <Hr />
           <Label
             letter="E"

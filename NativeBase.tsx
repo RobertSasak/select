@@ -22,13 +22,6 @@ export const theme = extendTheme({
         as: MaterialCommunityIcons,
       },
     },
-    Button: {
-      variants: {
-        solid: {
-          bg: 'red',
-        },
-      },
-    },
   },
 })
 

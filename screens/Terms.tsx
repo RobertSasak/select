@@ -1,4 +1,5 @@
 import React from 'react'
+import * as Application from 'expo-application'
 import {
   Heading,
   HStack,
@@ -6,10 +7,12 @@ import {
   IconButton,
   ScrollView,
   VStack,
+  Text,
 } from 'native-base'
 
 import { BottomTabScreenProps } from '../navigation/types'
 import P from '../components/P'
+import Constants from 'expo-constants'
 
 const Terms = ({ navigation }: BottomTabScreenProps<'Terms'>) => (
   <>
@@ -37,6 +40,15 @@ const Terms = ({ navigation }: BottomTabScreenProps<'Terms'>) => (
           to influence medical decisions has not been tested.
         </P>
       </VStack>
+      <Text textAlign="center" color="gray.400">
+        {Constants.expoConfig?.version}
+      </Text>
+      <Text textAlign="center" color="gray.400">
+        {Application.nativeBuildVersion}
+      </Text>
+      <Text textAlign="center" color="gray.400">
+        {Application.nativeApplicationVersion}
+      </Text>
     </ScrollView>
   </>
 )
