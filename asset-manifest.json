@@ -1,35 +1,20 @@
 {
   "files": {
-    "app.js": "/select/static/js/app.f0947abc.chunk.js",
-    "app.js.map": "/select/static/js/app.f0947abc.chunk.js.map",
-    "runtime~app.js": "/select/static/js/runtime~app.1a2ef8ed.js",
-    "runtime~app.js.map": "/select/static/js/runtime~app.1a2ef8ed.js.map",
-    "static/js/2.a9467294.chunk.js": "/select/static/js/2.a9467294.chunk.js",
-    "static/js/2.a9467294.chunk.js.map": "/select/static/js/2.a9467294.chunk.js.map",
-    "fonts/AntDesign.ttf": "/select/./fonts/AntDesign.ttf",
-    "fonts/Entypo.ttf": "/select/./fonts/Entypo.ttf",
-    "fonts/Feather.ttf": "/select/./fonts/Feather.ttf",
-    "fonts/FontAwesome.ttf": "/select/./fonts/FontAwesome.ttf",
-    "fonts/FontAwesome5_Brands.ttf": "/select/./fonts/FontAwesome5_Brands.ttf",
-    "fonts/FontAwesome5_Solid.ttf": "/select/./fonts/FontAwesome5_Solid.ttf",
-    "fonts/Fontisto.ttf": "/select/./fonts/Fontisto.ttf",
-    "fonts/Foundation.ttf": "/select/./fonts/Foundation.ttf",
-    "fonts/Ionicons.ttf": "/select/./fonts/Ionicons.ttf",
-    "fonts/MaterialCommunityIcons.ttf": "/select/./fonts/MaterialCommunityIcons.ttf",
-    "fonts/MaterialIcons.ttf": "/select/./fonts/MaterialIcons.ttf",
-    "fonts/SimpleLineIcons.ttf": "/select/./fonts/SimpleLineIcons.ttf",
-    "favicon-16.png": "/select/favicon-16.png",
-    "favicon-32.png": "/select/favicon-32.png",
+    "main.js": "/select/static/js/main.acd0e396.js",
+    "static/js/531.58b6b386.js": "/select/static/js/531.58b6b386.js",
+    "static/media/MaterialCommunityIcons.ttf": "/select/static/media/MaterialCommunityIcons.5d42b4e60858731e7b65.ttf",
+    "static/media/p1.jpeg": "/select/static/media/p1.e19be01f7fa7ff3c1921.jpeg",
     "favicon.ico": "/select/favicon.ico",
     "index.html": "/select/index.html",
+    "favicon-32.png": "/select/favicon-32.png",
+    "favicon-16.png": "/select/favicon-16.png",
     "manifest.json": "/select/manifest.json",
     "serve.json": "/select/serve.json",
-    "static/js/2.a9467294.chunk.js.LICENSE.txt": "/select/static/js/2.a9467294.chunk.js.LICENSE.txt",
-    "static/media/p1.jpeg": "/select/static/media/p1.e19be01f.jpeg"
+    "main.acd0e396.js.map": "/select/static/js/main.acd0e396.js.map",
+    "531.58b6b386.js.map": "/select/static/js/531.58b6b386.js.map"
   },
   "entrypoints": [
-    "static/js/runtime~app.1a2ef8ed.js",
-    "static/js/2.a9467294.chunk.js",
-    "static/js/app.f0947abc.chunk.js"
+    "static/js/531.58b6b386.js",
+    "static/js/main.acd0e396.js"
   ]
 }
