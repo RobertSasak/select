@@ -18,11 +18,14 @@ export type RootStackParamList = {
   P3: undefined
   P4: undefined
   P5: undefined
-  Risk: undefined
-  Prediction: {
+  Prediction: NavigatorScreenParams<PredictionTabParamList> & {
     score: number
   }
-  BottomTab: NavigatorScreenParams<BottomTabParamList> | undefined
+  Risk: undefined
+  Cosy: undefined
+  RiskInfo: undefined
+  CosyInfo: undefined
+  BottomTab: NavigatorScreenParams<BottomTabParamList>
   Terms: undefined
   NotFound: undefined
 }
@@ -40,3 +43,15 @@ export type BottomTabScreenProps<Screen extends keyof BottomTabParamList> =
     RNBottomTabScreenProps<BottomTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>
   >
+
+export type PredictionTabParamList = {
+  Risk: undefined
+  Cosy: undefined
+}
+
+export type PredictionTabScreenProps<
+  Screen extends keyof PredictionTabParamList
+> = CompositeScreenProps<
+  RNBottomTabScreenProps<PredictionTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>

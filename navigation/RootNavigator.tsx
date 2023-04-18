@@ -11,7 +11,8 @@ import P2 from '../screens/P2'
 import P3 from '../screens/P3'
 import P4 from '../screens/P4'
 import P5 from '../screens/P5'
-import Risk from '../screens/Risk'
+import RiskInfo from '../screens/RiskInfo'
+import CosyInfo from '../screens/CosyInfo'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
@@ -24,7 +25,8 @@ const RootNavigator = () => (
       <Stack.Screen name="P3" component={P3} />
       <Stack.Screen name="P4" component={P4} />
       <Stack.Screen name="P5" component={P5} />
-      <Stack.Screen name="Risk" component={Risk} />
+      <Stack.Screen name="RiskInfo" component={RiskInfo} />
+      <Stack.Screen name="CosyInfo" component={CosyInfo} />
       <Stack.Screen name="Prediction" component={Prediction} />
       <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} />

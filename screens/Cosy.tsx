@@ -17,25 +17,25 @@ import {
   Tooltip,
 } from 'react-native-responsive-linechart'
 
-import model from '../services/risk'
+import model from '../services/cosy'
 import { theme } from '../NativeBase'
 import { useNavigation } from '@react-navigation/native'
 
 const primary = theme.colors.primary[500]
 const primary800 = theme.colors.primary[800]
 
-interface RiskProps {
+interface CosyProps {
   score: number
 }
 
-const Risk: React.FC<RiskProps> = ({ score }) => {
+const Cosy: React.FC<CosyProps> = ({ score }) => {
   const [selected, setSelected] = useState(12)
   const navigation = useNavigation()
   const [values, mins, maxs] = useMemo(
     () => [
-      model.value[score].map((v, i) => ({ x: i, y: v * 100 })),
-      model.min[score].map((v, i) => ({ x: i, y: v * 100 })),
-      model.max[score].map((v, i) => ({ x: i, y: v * 100 })),
+      model.value[score].map((v, i) => ({ x: i, y: v })),
+      model.min[score].map((v, i) => ({ x: i, y: v })),
+      model.max[score].map((v, i) => ({ x: i, y: v })),
     ],
     [score]
   )
@@ -111,10 +111,12 @@ const Risk: React.FC<RiskProps> = ({ score }) => {
       </Chart>
       <View mx="5" mt="3">
         <HStack alignItems="center">
-          <Heading flex={1}>Risk of late seizures</Heading>
+          <Heading flex={1}>
+            Chance of an occurrence of a seizure in the next year
+          </Heading>
           <IconButton
             icon={<Icon name="information" />}
-            onPress={() => navigation.navigate('RiskInfo')}
+            onPress={() => navigation.navigate('CosyInfo')}
           />
         </HStack>
         <HStack
@@ -164,4 +166,4 @@ const Risk: React.FC<RiskProps> = ({ score }) => {
   )
 }
 
-export default Risk
+export default Cosy
