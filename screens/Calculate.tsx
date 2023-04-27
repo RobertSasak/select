@@ -153,6 +153,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             onPress={() => {
               navigation.navigate('Prediction', {
                 score: p1 + p2 + p3 + p4 + p5,
+                screen: 'Risk',
               })
             }}
           >

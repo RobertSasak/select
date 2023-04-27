@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
-    "deploy:web": "yarn && npx expo export:web && gh-pages -d web-build"
+    "deploy:web": "yarn && expo export:web && gh-pages -d web-build"
   },
   "jest": {
     "preset": "jest-expo"

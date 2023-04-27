@@ -20,6 +20,7 @@ import {
 import model from '../services/cosy'
 import { theme } from '../NativeBase'
 import { useNavigation } from '@react-navigation/native'
+import P from '../components/P'
 
 const primary = theme.colors.primary[500]
 const primary800 = theme.colors.primary[800]
@@ -31,11 +32,12 @@ interface CosyProps {
 const Cosy: React.FC<CosyProps> = ({ score }) => {
   const [selected, setSelected] = useState(12)
   const navigation = useNavigation()
-  const [values, mins, maxs] = useMemo(
+  const [values, mins, maxs, limitPrivate] = useMemo(
     () => [
       model.value[score].map((v, i) => ({ x: i, y: v })),
       model.min[score].map((v, i) => ({ x: i, y: v })),
       model.max[score].map((v, i) => ({ x: i, y: v })),
+      model.max[score].map((v, i) => ({ x: i, y: 20 })),
     ],
     [score]
   )
@@ -51,14 +53,23 @@ const Cosy: React.FC<CosyProps> = ({ score }) => {
           width: '100%',
         }}
         padding={{ left: 40, bottom: 20, right: 20, top: 40 }}
-        xDomain={{ min: 0, max: 60 }}
+        xDomain={{ min: 0, max: 24 }}
         yDomain={{ min: 0, max: 100 }}
       >
         <VerticalAxis
           tickCount={11}
           theme={{ labels: { formatter: (v) => v.toFixed(0) + '%' } }}
         />
-        <HorizontalAxis tickCount={6} />
+        <HorizontalAxis tickCount={5} />
+        <Line
+          data={limitPrivate}
+          theme={{
+            stroke: {
+              color: '#DD0000',
+              width: 1,
+            },
+          }}
+        />
         <Line
           data={mins}
           theme={{
@@ -111,9 +122,7 @@ const Cosy: React.FC<CosyProps> = ({ score }) => {
       </Chart>
       <View mx="5" mt="3">
         <HStack alignItems="center">
-          <Heading flex={1}>
-            Chance of an occurrence of a seizure in the next year
-          </Heading>
+          <Heading flex={1}>Chance of seizures in the next year</Heading>
           <IconButton
             icon={<Icon name="information" />}
             onPress={() => navigation.navigate('CosyInfo')}
@@ -126,7 +135,7 @@ const Cosy: React.FC<CosyProps> = ({ score }) => {
           alignItems="center"
         >
           <VStack flex={1}>
-            <Text>{selected} months after stroke</Text>
+            <Text>{selected} months seizure-free after stroke</Text>
             <Text color="muted.400">
               ({min}% - {max}%)
             </Text>
@@ -148,7 +157,7 @@ const Cosy: React.FC<CosyProps> = ({ score }) => {
             w="75%"
             defaultValue={selected}
             minValue={0}
-            maxValue={60}
+            maxValue={24}
             value={selected}
             onChange={setSelected}
           >
@@ -158,9 +167,13 @@ const Cosy: React.FC<CosyProps> = ({ score }) => {
             <Slider.Thumb />
           </Slider>
           <Heading size="md" fontWeight="300" pr="2">
-            60
+            24
           </Heading>
         </HStack>
+        <P>
+          The red horizontal line shows the 20% cut-off for COSY that is
+          frequently considered safe for private driving.
+        </P>
       </View>
     </>
   )

@@ -49,7 +49,7 @@ const Prediction = ({
         <BottomTab.Screen
           name="Cosy"
           options={{
-            tabBarLabel: 'Chance of a seizure',
+            tabBarLabel: 'Risks for driving',
             tabBarIcon: ({ color }) => (
               <Icon name="car-traction-control" color={color} size="xl" />
             ),

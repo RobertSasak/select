@@ -24,66 +24,67 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         About
       </Heading>
     </HStack>
-    <ScrollView px="5">
+    <ScrollView px="5" pb={10}>
       <Heading size="md" py="2">
         Eligibility
       </Heading>
-      <P>SeLECT should only be used in people</P>
-      <Li>who have suffered an ischemic stroke AND</Li>
-      <Li>who are adults aged above 18 years.</Li>
-      <P>SeLECT should NOT be used in people with</P>
-      <Li>history of seizures or epilepsy OR</Li>
-      <Li>hemorrhagic stroke OR</Li>
-      <Li>transient ischemic attack OR</Li>
+      <P>PRESS should only be used in adults</P>
+      <Li>who had an ischaemic stroke AND</Li>
       <Li>
-        potentially epileptogenic comorbidities (i.e. intracranial tumour,
-        cerebral venous thrombosis, history of severe traumatic brain injury,
-        history of brain surgery, etc.)
+        who have impaired oral intake defined as FOIS ≤ 4 (i.e. oral diet of a
+        single consistency or worse)
       </Li>
+      <P>PRESS should NOT be used in people with </P>
+      <Li>pre-existent dysphagia OR</Li>
+      <Li>recurrent stroke within the prediction time-frame OR</Li>
+      <Li>late hospital admission &gt; 4 days after stroke onset. </Li>
       <Hr />
       <Heading size="md" py="2">
         Limitations
       </Heading>
-      <P>
-        SeLECT can aid prognostication of late seizure risk after ischemic
-        stroke but its clinical usefulness to influence medical decisions has
-        not been tested.
-      </P>
+      <Li>
+        PRESS can aid prognostication of dysphagia recovery but its clinical
+        usefulness to influence medical decisions has not been tested.
+      </Li>
       <Hr />
       <Heading size="md" py="2">
         Prediction
       </Heading>
-      <P>
-        SeLECT provides time-dependent predictions for the absolute risk of late
-        seizures after ischemic stroke according to the total SeLECT value. 95%
-        confidence intervals (CI) are also displayed.
-      </P>
+      <Li>
+        PRESS provides time-dependent predictions for recovery of impaired oral
+        intake according to the total PRESS value. 95% confidence intervals (CI)
+        are also displayed.
+      </Li>
+      <Li>
+        Guidelines recommend enteral tube feeding if impaired oral intake
+        persists for ≥ 7 days after stroke. Percutaneous endoscopic gastrostomy
+        (PEG) should be preferred if impaired oral intake persists for ≥ 30 days
+        after stroke.
+      </Li>
       <Hr />
       <Heading size="md" py="2">
         Performance
       </Heading>
-      <P>
-        SeLECT was developed in 1200 people in Switzerland and externally
-        validated in 1169 people from three international cohorts (Austria,
-        Germany, Italy).
-      </P>
-      <P>Overall discrimination: c statistic of 0.77 (95% CI 0.71 - 0.82).</P>
-      <P>
-        Overall calibration: calibration plots indicated good fit of predicted
-        and observed data.
-      </P>
+      <Li>
+        PRESS was developed in 153 stroke survivors in Switzerland and
+        prospectively validated in 126 separate subjects.
+      </Li>
+      <Li>
+        Discrimination in validation cohort: c statistic of 0.84 for predicting
+        recovery of oral intake on day 7 and 0.77 on day 30; c statistic of 0.94
+        for predicting return to prestroke diet on day 7 and 0.71 on day 30.
+      </Li>
+      <Li>
+        Calibration in validation cohort: high agreement between predicted and
+        observed outcomes.
+      </Li>
       <Hr />
       <Heading size="md" py="2">
         Reference manuscript:
       </Heading>
-      <Link
-        mb="5"
-        href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(17)30404-0/fulltext"
-      >
-        Galovic M, Döhler N, Erdélyi-Canavese B, et al. Prediction of late
-        seizures after ischaemic stroke with a novel prognostic model (the
-        SeLECT score): a multivariable prediction model development and
-        validation study. The Lancet Neurology 2018; 17: 143-52.
+      <Link href="https://road-safety.transport.ec.europa.eu/system/files/2021-07/epilepsy_and_driving_in_europe_final_report_v2_en.pdf">
+        Second European Working Group on Epilepsy and Driving. Epilepsy and
+        driving in Europe. 2005.
       </Link>
     </ScrollView>
   </>

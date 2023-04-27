@@ -31,7 +31,7 @@ declare module 'native-base' {
   interface ICustomTheme extends CustomThemeType {}
 }
 
-const NativeBase: React.FC = ({ children }) => {
+const NativeBase: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return <NativeBaseProvider theme={theme}>{children}</NativeBaseProvider>
 }
 

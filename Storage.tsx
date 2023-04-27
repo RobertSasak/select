@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { syncStorage } from 'use-state-persist'
 
-const Storage: React.FC = ({ children }) => {
+const Storage: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     syncStorage.init().then(() => {
