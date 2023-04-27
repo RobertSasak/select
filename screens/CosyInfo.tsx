@@ -1,5 +1,12 @@
 import React from 'react'
-import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
+import {
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  ScrollView,
+} from 'native-base'
 
 import P from '../components/P'
 
@@ -38,6 +45,10 @@ const CosyInfo = ({ navigation }: RootStackScreenProps<'CosyInfo'>) => (
         stroke were not counted as unprovoked seizures.
       </P>
       <P>
+        The red horizontal line shows the 20% cut-off for COSY that is
+        frequently considered safe for private driving.
+      </P>
+      <P>
         The 95% confidence interval for the risk estimates is given in brackets.
       </P>
       <P>
@@ -47,6 +58,13 @@ const CosyInfo = ({ navigation }: RootStackScreenProps<'CosyInfo'>) => (
         individualised approach considering the safety to drive in stroke
         surviors.
       </P>
+      <Heading size="md" py="2">
+        Reference manuscript:
+      </Heading>
+      <Link href="https://road-safety.transport.ec.europa.eu/system/files/2021-07/epilepsy_and_driving_in_europe_final_report_v2_en.pdf">
+        Second European Working Group on Epilepsy and Driving. Epilepsy and
+        driving in Europe. 2005.
+      </Link>
     </ScrollView>
   </>
 )

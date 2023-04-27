@@ -82,9 +82,16 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
       <Heading size="md" py="2">
         Reference manuscript:
       </Heading>
-      <Link href="https://road-safety.transport.ec.europa.eu/system/files/2021-07/epilepsy_and_driving_in_europe_final_report_v2_en.pdf">
-        Second European Working Group on Epilepsy and Driving. Epilepsy and
-        driving in Europe. 2005.
+      <Link href="https://www.sciencedirect.com/science/article/pii/S1474442217304040">
+        Galovic, M. et al. Prediction of late seizures after ischaemic stroke
+        with a novel prognostic model (the SeLECT score): a multivariable
+        prediction model development and validation study. The Lancet Neurology
+        17, 143–152 (2018).
+      </Link>
+      <Link href="https://jamanetwork-com.ezproxy.uzh.ch/journals/jamaneurology/fullarticle/2802972">
+        Sinka, L. et al. Association of Mortality and Risk of Epilepsy With Type
+        of Acute Symptomatic Seizure After Ischemic Stroke and an Updated
+        Prognostic Model. Jama Neurol 80, (2023). Link:
       </Link>
     </ScrollView>
   </>

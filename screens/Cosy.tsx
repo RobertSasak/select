@@ -170,10 +170,6 @@ const Cosy: React.FC<CosyProps> = ({ score }) => {
             24
           </Heading>
         </HStack>
-        <P>
-          The red horizontal line shows the 20% cut-off for COSY that is
-          frequently considered safe for private driving.
-        </P>
       </View>
     </>
   )
