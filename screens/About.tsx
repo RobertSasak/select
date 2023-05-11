@@ -7,11 +7,11 @@ import {
   ScrollView,
 } from 'native-base'
 
-import Hr from '../components/Hr'
 import Li from '../components/Li'
 import P from '../components/P'
 
 import { BottomTabScreenProps } from '../navigation/types'
+import Hr from '../components/Hr'
 
 const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
   <>
@@ -28,55 +28,46 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
       <Heading size="md" py="2">
         Eligibility
       </Heading>
-      <P>PRESS should only be used in adults</P>
-      <Li>who had an ischaemic stroke AND</Li>
+      <P>SeLECT should only be used in people</P>
+      <Li>who have suffered an ischemic stroke AND</Li>
+      <Li>who are adults aged above 18 years.</Li>
+      <P>SeLECT should NOT be used in people with</P>
+      <Li>history of seizures or epilepsy OR</Li>
+      <Li>hemorrhagic stroke OR</Li>
+      <Li>transient ischemic attack OR</Li>
       <Li>
-        who have impaired oral intake defined as FOIS ≤ 4 (i.e. oral diet of a
-        single consistency or worse)
+        potentially epileptogenic comorbidities (i.e. intracranial tumour,
+        cerebral venous thrombosis, history of severe traumatic brain injury,
+        history of brain surgery, etc.)
       </Li>
-      <P>PRESS should NOT be used in people with </P>
-      <Li>pre-existent dysphagia OR</Li>
-      <Li>recurrent stroke within the prediction time-frame OR</Li>
-      <Li>late hospital admission &gt; 4 days after stroke onset. </Li>
-      <Hr />
       <Heading size="md" py="2">
         Limitations
       </Heading>
       <Li>
-        PRESS can aid prognostication of dysphagia recovery but its clinical
-        usefulness to influence medical decisions has not been tested.
+        SeLECT can aid prognostication of late seizure risk after ischemic
+        stroke but its clinical usefulness to influence medical decisions has
+        not been tested.
       </Li>
-      <Hr />
       <Heading size="md" py="2">
         Prediction
       </Heading>
       <Li>
-        PRESS provides time-dependent predictions for recovery of impaired oral
-        intake according to the total PRESS value. 95% confidence intervals (CI)
-        are also displayed.
+        SeLECT provides time-dependent predictions for the absolute risk of late
+        seizures after ischemic stroke according to the total SeLECT value. 95%
+        confidence intervals (CI) are also displayed.
       </Li>
-      <Li>
-        Guidelines recommend enteral tube feeding if impaired oral intake
-        persists for ≥ 7 days after stroke. Percutaneous endoscopic gastrostomy
-        (PEG) should be preferred if impaired oral intake persists for ≥ 30 days
-        after stroke.
-      </Li>
-      <Hr />
       <Heading size="md" py="2">
         Performance
       </Heading>
       <Li>
-        PRESS was developed in 153 stroke survivors in Switzerland and
-        prospectively validated in 126 separate subjects.
+        SeLECT was developed in 1200 people in Switzerland and externally
+        validated in 1169 people from three international cohorts (Austria,
+        Germany, Italy).
       </Li>
+      <Li>Overall discrimination: c statistic of 0.77 (95% CI 0.71 – 0.82).</Li>
       <Li>
-        Discrimination in validation cohort: c statistic of 0.84 for predicting
-        recovery of oral intake on day 7 and 0.77 on day 30; c statistic of 0.94
-        for predicting return to prestroke diet on day 7 and 0.71 on day 30.
-      </Li>
-      <Li>
-        Calibration in validation cohort: high agreement between predicted and
-        observed outcomes.
+        Overall calibration: calibration plots indicated good fit of predicted
+        and observed data.
       </Li>
       <Hr />
       <Heading size="md" py="2">
@@ -88,6 +79,7 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         prediction model development and validation study. The Lancet Neurology
         17, 143–152 (2018).
       </Link>
+      <P></P>
       <Link href="https://jamanetwork-com.ezproxy.uzh.ch/journals/jamaneurology/fullarticle/2802972">
         Sinka, L. et al. Association of Mortality and Risk of Epilepsy With Type
         of Acute Symptomatic Seizure After Ischemic Stroke and an Updated
