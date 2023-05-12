@@ -3,7 +3,7 @@
     "name": "select",
     "slug": "select",
     "owner": "galovic",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "select",
@@ -17,9 +17,7 @@
       "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/cc84318e-ccd7-4b4b-9ceb-a65c4361ea7b"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "sk.sasak.select"
@@ -29,7 +27,6 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "versionCode": 100033,
       "package": "sk.sasak.select"
     },
     "web": {
