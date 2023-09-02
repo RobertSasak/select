@@ -20,7 +20,6 @@ import {
 import model from '../services/cosy'
 import { theme } from '../NativeBase'
 import { useNavigation } from '@react-navigation/native'
-import P from '../components/P'
 
 const primary = theme.colors.primary[500]
 const primary800 = theme.colors.primary[800]
