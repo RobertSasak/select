@@ -15,6 +15,7 @@
       "channel": "preview"
     },
     "production": {
+      "autoIncrement": true,
       "channel": "production"
     }
   },
