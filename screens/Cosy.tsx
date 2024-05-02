@@ -37,7 +37,10 @@ const Cosy: React.FC<CosyProps> = ({ score, model }) => {
       model.value[score].map((v, i) => ({ x: i, y: v })),
       model.min[score].map((v, i) => ({ x: i, y: v })),
       model.max[score].map((v, i) => ({ x: i, y: v })),
-      model.max[score].map((v, i) => ({ x: i, y: 20 })),
+      model.max[score].map((v, i) => ({
+        x: i,
+        y: 20 + Math.random() * 0.0001,
+      })),
     ],
     [score]
   )
