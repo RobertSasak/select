@@ -25,11 +25,17 @@ const linking: LinkingOptions<RootStackParamList> = {
       P5: {
         path: 'territory-of-mca-involvement',
       },
+      P6: {
+        path: 'type-of-early-seizure',
+      },
+      P7: {
+        path: 'day-of-early-seizure',
+      },
       Risk: {
         path: 'risk-of-late-seizures',
       },
       Prediction: {
-        path: 'prediction/:score',
+        path: 'prediction/:model/:score',
         screens: {
           Risk: {
             path: 'risk',

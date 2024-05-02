@@ -1,6 +1,4 @@
-import { loadOptions } from '@babel/core'
 import { Button } from 'native-base'
-import React from 'react'
 
 interface Option {
   label: string
@@ -18,6 +16,7 @@ const Segment = ({ options, selected, onPress }: SegmentProps) => (
       <Button
         key={value}
         flexGrow={1}
+        flexShrink={1}
         variant={value === selected ? 'solid' : 'outline'}
         onPress={() => onPress(value)}
       >

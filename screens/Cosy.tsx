@@ -17,18 +17,19 @@ import {
   Tooltip,
 } from 'react-native-responsive-linechart'
 
-import model from '../services/cosy'
 import { theme } from '../NativeBase'
 import { useNavigation } from '@react-navigation/native'
+import { ModelData } from '../types'
 
 const primary = theme.colors.primary[500]
 const primary800 = theme.colors.primary[800]
 
 interface CosyProps {
+  model: ModelData
   score: number
 }
 
-const Cosy: React.FC<CosyProps> = ({ score }) => {
+const Cosy: React.FC<CosyProps> = ({ score, model }) => {
   const [selected, setSelected] = useState(12)
   const navigation = useNavigation()
   const [values, mins, maxs, limitPrivate] = useMemo(

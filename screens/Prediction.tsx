@@ -8,6 +8,12 @@ import {
 } from '../navigation/types'
 import Risk from '../screens/Risk'
 import Cosy from '../screens/Cosy'
+import { Model } from '../types'
+
+import COSY_SeLECT_ASyS from '../models/COSY_SeLECT_ASyS'
+import COSY_SeLECT2 from '../models/COSY_SeLECT2'
+import SeLECT_ASyS from '../models/SeLECT_ASyS'
+import SeLECT2 from '../models/SeLECT2'
 
 const BottomTab = createBottomTabNavigator<PredictionTabParamList>()
 
@@ -15,7 +21,10 @@ const Prediction = ({
   navigation,
   route,
 }: RootStackScreenProps<'Prediction'>) => {
-  const { score } = route.params
+  const { score, model } = route.params
+  const cosy = model === Model.SeLECT2 ? COSY_SeLECT2 : COSY_SeLECT_ASyS
+  const risk = model === Model.SeLECT2 ? SeLECT2 : SeLECT_ASyS
+
   return (
     <>
       <HStack safeAreaTop bg="primary.500" pr="50px">
@@ -44,7 +53,7 @@ const Prediction = ({
             ),
           }}
         >
-          {() => <Risk score={score} />}
+          {() => <Risk score={score} model={risk} />}
         </BottomTab.Screen>
         <BottomTab.Screen
           name="Cosy"
@@ -55,7 +64,7 @@ const Prediction = ({
             ),
           }}
         >
-          {() => <Cosy score={score} />}
+          {() => <Cosy score={score} model={cosy} />}
         </BottomTab.Screen>
       </BottomTab.Navigator>
     </>

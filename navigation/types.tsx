@@ -4,6 +4,7 @@ import {
   NavigatorScreenParams,
 } from '@react-navigation/native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { Model } from '../types'
 
 declare global {
   namespace ReactNavigation {
@@ -18,7 +19,10 @@ export type RootStackParamList = {
   P3: undefined
   P4: undefined
   P5: undefined
+  P6: undefined
+  P7: undefined
   Prediction: NavigatorScreenParams<PredictionTabParamList> & {
+    model: Model
     score: number
   }
   Risk: undefined
