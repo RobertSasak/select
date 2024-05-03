@@ -12,7 +12,7 @@ const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
         icon={<Icon name="arrow-left" color="white" size="xl" />}
         onPress={() => navigation.navigate('Calculate')}
       />
-      <Heading flex={1} color="white" isTruncated>
+      <Heading flex={1} textAlign="center" color="white">
         Timing of acute symptomatic seizure
       </Heading>
     </HStack>

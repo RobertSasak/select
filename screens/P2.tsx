@@ -21,7 +21,7 @@ const P2 = ({ navigation }: RootStackScreenProps<'P2'>) => (
         icon={<Icon name="arrow-left" color="white" size="xl" />}
         onPress={() => navigation.navigate('Calculate')}
       />
-      <Heading flex={1} color="white" isTruncated>
+      <Heading flex={1} textAlign="center" color="white">
         Large-artery atherosclerosis
       </Heading>
     </HStack>

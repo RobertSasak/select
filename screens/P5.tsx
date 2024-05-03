@@ -20,7 +20,7 @@ const P5 = ({ navigation }: RootStackScreenProps<'P5'>) => (
         icon={<Icon name="arrow-left" color="white" size="xl" />}
         onPress={() => navigation.navigate('Calculate')}
       />
-      <Heading flex={1} color="white" isTruncated>
+      <Heading flex={1} textAlign="center" color="white">
         Territory of MCA involvement
       </Heading>
     </HStack>

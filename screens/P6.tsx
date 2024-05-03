@@ -18,7 +18,7 @@ const P6 = ({ navigation }: RootStackScreenProps<'P6'>) => (
         icon={<Icon name="arrow-left" color="white" size="xl" />}
         onPress={() => navigation.navigate('Calculate')}
       />
-      <Heading flex={1} color="white" isTruncated>
+      <Heading flex={1} textAlign="center" color="white">
         Type of acute symptomatic seizure
       </Heading>
     </HStack>
