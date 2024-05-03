@@ -2,6 +2,8 @@ import React from 'react'
 import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
 
 import { RootStackScreenProps } from '../navigation/types'
+import P from '../components/P'
+import B from '../components/B'
 
 const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
   <>
@@ -11,10 +13,18 @@ const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
         onPress={() => navigation.navigate('Calculate')}
       />
       <Heading flex={1} color="white" isTruncated>
-        Day of early seizure
+        Timing of acute symptomatic seizure
       </Heading>
     </HStack>
-    <ScrollView px="5"></ScrollView>
+    <ScrollView px="5">
+      <P>
+        <B>Day 0</B> refers to seizures occurring on the same day as stroke
+        onset.
+      </P>
+      <P>
+        <B>Day 1</B> refers to the next day after stroke onset.
+      </P>
+    </ScrollView>
   </>
 )
 

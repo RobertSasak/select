@@ -33,7 +33,7 @@ const Prediction = ({
           onPress={() => navigation.navigate('Calculate')}
         />
         <Heading alignSelf="center" flex={1} textAlign="center" color="white">
-          Score {score}
+          {model === Model.SeLECT2 ? 'SeLECT 2.0' : 'SeLECT-ASyS'} Score {score}
         </Heading>
       </HStack>
 

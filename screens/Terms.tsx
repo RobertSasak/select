@@ -31,8 +31,8 @@ const Terms = ({ navigation }: BottomTabScreenProps<'Terms'>) => (
         <P>
           The SeLECT score is a prediction tool applicable to people who
           suffered an ischemic stroke. Given some clinical characteristics, it
-          provides risk estimates of late seizures occurring &gt; 7 days after
-          stroke.
+          provides risk estimates of remote symptomatic seizures occurring &gt;
+          7 days after stroke.
         </P>
         <P>
           This tool is meant to be used only by medical professionals to improve

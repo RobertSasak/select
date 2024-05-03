@@ -60,8 +60,8 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             <P>
               The SeLECT score is a prediction tool applicable to people who
               suffered an ischemic stroke. Given some clinical characteristics,
-              it provides risk estimates of late seizures occurring &gt; 7 days
-              after stroke.
+              it provides risk estimates of remote symptomatic seizures
+              occurring &gt; 7 days after stroke.
             </P>
             <P>
               This tool is meant to be used only by medical professionals to
@@ -98,7 +98,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
         <Box safeAreaBottom>
           <Label
             letter=""
-            title="Does the patient have an early seizure?"
+            title="Acute symptomatic seizure?"
             subTitle="≤ 7 days after stroke"
             onPress={() => navigation.navigate('P3')}
           />
@@ -111,15 +111,9 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             onPress={setP3}
           />
           <Text color="gray.400">
-            Based on the answer it is used either SeLECT-ASyS or SeLECT 2.0
-            model.
+            If "No" using SeLECT2.0 model, if "Yes" using SeLECT-ASyS model.
           </Text>
           <Hr />
-          {/* <Expand2
-            showLeft={p3 === Model.SeLECT2}
-            left={<View h={100} bg="green.300" />}
-            right={<View h={200} bg="blue.300" />}
-          /> */}
           <Expand2
             showLeft={p3 === Model.SeLECT2}
             left={
@@ -144,27 +138,27 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             right={
               <>
                 <Label
-                  title="Type of early seizure"
+                  title="Type of acute symptomatic seizure"
                   onPress={() => navigation.navigate('P6')}
                 />
                 <Segment
                   options={[
                     { label: 'Other/Unknown', value: 0 },
-                    { label: 'Bilateral tonic/clonic', value: 1 },
-                    { label: 'status epilepticus', value: 4 },
+                    { label: 'Bilateral tonic-clonic', value: 1 },
+                    { label: 'Status epilepticus', value: 4 },
                   ]}
                   selected={p6}
                   onPress={setP6}
                 />
                 <Hr />
                 <Label
-                  title="Day of early seizure"
+                  title="Timing of acute symptomatic seizure"
                   onPress={() => navigation.navigate('P7')}
                 />
                 <Segment
                   options={[
-                    { label: 'day 0', value: 1 },
-                    { label: 'day ≥ 1 or unknown', value: 0 },
+                    { label: 'Day 0', value: 1 },
+                    { label: 'Day ≥ 1 or Unknown', value: 0 },
                   ]}
                   selected={p7}
                   onPress={setP7}

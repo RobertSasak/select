@@ -44,27 +44,31 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         Limitations
       </Heading>
       <Li>
-        SeLECT can aid prognostication of late seizure risk after ischemic
-        stroke but its clinical usefulness to influence medical decisions has
-        not been tested.
+        SeLECT can aid prognostication of remote symptomatic seizure risk after
+        ischemic stroke but its clinical usefulness to influence medical
+        decisions has not been tested.
       </Li>
       <Heading size="md" py="2">
         Prediction
       </Heading>
       <Li>
-        SeLECT provides time-dependent predictions for the absolute risk of late
-        seizures after ischemic stroke according to the total SeLECT value. 95%
-        confidence intervals (CI) are also displayed.
+        SeLECT provides time-dependent predictions for the absolute risk of
+        remote symptomatic seizures after ischemic stroke according to the total
+        SeLECT value. 95% confidence intervals (CI) are also displayed.
       </Li>
       <Heading size="md" py="2">
         Performance
       </Heading>
       <Li>
-        SeLECT was developed in 1200 people in Switzerland and externally
-        validated in 1169 people from three international cohorts (Austria,
-        Germany, Italy).
+        SeLECT was developed and validated in a multicentre registry
+        (SeLECT-registry) of with ischemic stroke. The prediction estimates are
+        continuously updated when new data is added to the international
+        SeLECT-registry.
       </Li>
-      <Li>Overall discrimination: c statistic of 0.77 (95% CI 0.71 – 0.82).</Li>
+      <Li>
+        The initial SeLECT 1.0 model had a discrimination (c statistic) of 0.77
+        (95% CI 0.71 – 0.82).
+      </Li>
       <Li>
         Overall calibration: calibration plots indicated good fit of predicted
         and observed data.
@@ -83,8 +87,13 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
       <Link href="https://jamanetwork-com.ezproxy.uzh.ch/journals/jamaneurology/fullarticle/2802972">
         Sinka, L. et al. Association of Mortality and Risk of Epilepsy With Type
         of Acute Symptomatic Seizure After Ischemic Stroke and an Updated
-        Prognostic Model. Jama Neurol 80, (2023). Link:
+        Prognostic Model. JAMA Neurol 80, 605-613 (2023).
       </Link>
+      <P></P>
+      <P>
+        Schubert, KM et al. Implications for driving based on the risk of
+        seizures after ischemic stroke. JNNP (2024, in press).
+      </P>
     </ScrollView>
   </>
 )
