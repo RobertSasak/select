@@ -29,13 +29,6 @@ const P3 = ({ navigation }: RootStackScreenProps<'P3'>) => (
         Acute symptomatic seizures, also known as “early” seizures, are defined
         as <B>seizures occurring within 7 days</B> of the ischemic stroke.
       </P>
-      <P>
-        Early seizures are categorised as short seizures or status epilepticus.
-        Status epilepticus is defined according to the definition of the ILAE;
-        non-convulsive status epilepticus is defined electroencephalographically
-        according to the Salzburg criteria. Short seizures are those that do not
-        meet the criteria for status epilepticus.
-      </P>
       <Heading>Reference</Heading>
       <Link href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1528-1167.2009.02285.x">
         Beghi E, Carpio A, Forsgren L, Hesdorffer DC, Malmgren K, Sander JW, et

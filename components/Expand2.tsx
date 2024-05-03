@@ -27,34 +27,66 @@ const Expand = ({ showLeft, left, right }: ExpandProps) => {
   }, [heightLeft, heightRight])
 
   useEffect(() => {
-    if (showLeft) {
-      Animated.sequence([
-        Animated.timing(translateX, {
-          toValue: newWidth,
-          duration: TIME,
-          useNativeDriver: false,
-        }),
-        Animated.delay(DELAY),
-        Animated.timing(height, {
-          toValue: newHeight,
-          duration: TIME,
-          useNativeDriver: false,
-        }),
-      ]).start()
+    if (heightLeft < heightRight) {
+      if (showLeft) {
+        Animated.sequence([
+          Animated.timing(translateX, {
+            toValue: newWidth,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+          Animated.delay(DELAY),
+          Animated.timing(height, {
+            toValue: newHeight,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+        ]).start()
+      } else {
+        Animated.sequence([
+          Animated.timing(height, {
+            toValue: newHeight,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+          Animated.delay(DELAY),
+          Animated.timing(translateX, {
+            toValue: newWidth,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+        ]).start()
+      }
     } else {
-      Animated.sequence([
-        Animated.timing(height, {
-          toValue: newHeight,
-          duration: TIME,
-          useNativeDriver: false,
-        }),
-        Animated.delay(DELAY),
-        Animated.timing(translateX, {
-          toValue: newWidth,
-          duration: TIME,
-          useNativeDriver: false,
-        }),
-      ]).start()
+      if (showLeft) {
+        Animated.sequence([
+          Animated.timing(height, {
+            toValue: newHeight,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+          Animated.delay(DELAY),
+          Animated.timing(translateX, {
+            toValue: newWidth,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+        ]).start()
+      } else {
+        Animated.sequence([
+          Animated.timing(translateX, {
+            toValue: newWidth,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+          Animated.delay(DELAY),
+          Animated.timing(height, {
+            toValue: newHeight,
+            duration: TIME,
+            useNativeDriver: false,
+          }),
+        ]).start()
+      }
     }
   }, [showLeft])
 

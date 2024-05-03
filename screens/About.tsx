@@ -84,7 +84,7 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
         17, 143–152 (2018).
       </Link>
       <P></P>
-      <Link href="https://jamanetwork-com.ezproxy.uzh.ch/journals/jamaneurology/fullarticle/2802972">
+      <Link href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2802972">
         Sinka, L. et al. Association of Mortality and Risk of Epilepsy With Type
         of Acute Symptomatic Seizure After Ischemic Stroke and an Updated
         Prognostic Model. JAMA Neurol 80, 605-613 (2023).

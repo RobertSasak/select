@@ -9,6 +9,7 @@ import {
   Box,
   Modal,
   Text,
+  View,
 } from 'native-base'
 import { useStatePersist } from 'use-state-persist'
 
@@ -18,7 +19,6 @@ import Segment from '../components/Segment'
 import Hr from '../components/Hr'
 import P from '../components/P'
 import { Model } from '../types'
-import Expand from '../components/Expand'
 import Expand2 from '../components/Expand2'
 
 const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
@@ -29,8 +29,8 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
   const [p3, setP3] = useStatePersist<Model>('p3', Model.SeLECT2) // Does have early seizure
   const [p4, setP4] = useStatePersist('p4', 0) // Cortical involvement
   const [p5, setP5] = useStatePersist('p5', 0) // Territory of MCA involvement
-  const [p6, setP6] = useStatePersist('p6', 0) // Type of early seizure
-  const [p7, setP7] = useStatePersist('p7', 0) // Day of early seizure
+  const [p6, setP6] = useStatePersist('p6', 0) // Type of acute symptomatic seizure
+  const [p7, setP7] = useStatePersist('p7', 0) // Timing of acute symptomatic seizure
   const [p8, setP8] = useStatePersist('p8', 1) // Sex
 
   let score = 0
@@ -98,7 +98,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
         <Box safeAreaBottom>
           <Label
             letter=""
-            title="Acute symptomatic seizure?"
+            title="Acute symptomatic seizure"
             subTitle="≤ 7 days after stroke"
             onPress={() => navigation.navigate('P3')}
           />
@@ -180,18 +180,24 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             onPress={setP2}
           />
           <Hr />
-          <Expand show={p3 === Model.SeLECT_ASyS && p2 === 1}>
-            <Label title="Sex" />
-            <Segment
-              options={[
-                { label: 'FEMALE', value: 1 },
-                { label: 'MALE', value: 2 },
-              ]}
-              selected={p8}
-              onPress={setP8}
-            />
-            <Hr />
-          </Expand>
+          <Expand2
+            showLeft={p3 == Model.SeLECT2 || p2 === 0}
+            left={<View />}
+            right={
+              <>
+                <Label title="Sex" />
+                <Segment
+                  options={[
+                    { label: 'FEMALE', value: 1 },
+                    { label: 'MALE', value: 2 },
+                  ]}
+                  selected={p8}
+                  onPress={setP8}
+                />
+                <Hr />
+              </>
+            }
+          />
           <Label
             title="Cortical involvement"
             onPress={() => navigation.navigate('P4')}
@@ -205,21 +211,27 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             onPress={setP4}
           />
           <Hr />
-          <Expand show={p3 === Model.SeLECT2}>
-            <Label
-              title="Territory of MCA involvement"
-              onPress={() => navigation.navigate('P5')}
-            />
-            <Segment
-              options={[
-                { label: 'NO', value: 0 },
-                { label: 'YES', value: 1 },
-              ]}
-              selected={p5}
-              onPress={setP5}
-            />
-            <Hr />
-          </Expand>
+          <Expand2
+            showLeft={p3 === Model.SeLECT2}
+            left={
+              <>
+                <Label
+                  title="Territory of MCA involvement"
+                  onPress={() => navigation.navigate('P5')}
+                />
+                <Segment
+                  options={[
+                    { label: 'NO', value: 0 },
+                    { label: 'YES', value: 1 },
+                  ]}
+                  selected={p5}
+                  onPress={setP5}
+                />
+                <Hr />
+              </>
+            }
+            right={<View />}
+          />
           <Button
             mt="5"
             size="lg"
