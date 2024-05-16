@@ -32,9 +32,9 @@ const CosyInfo = ({ navigation }: RootStackScreenProps<'CosyInfo'>) => (
     <ScrollView px={5}>
       <P>
         Chance of an occurrence of a seizure in the next year (COSY) was
-        calculated calculated using the SeLECT2.0 model. Many regulators
-        consider a COSY below 20-40% acceptable for private driving and below 2%
-        for professional driving [ref 1].
+        calculated calculated using the SeLECT model. Many regulators consider a
+        COSY below 20-40% acceptable for private driving and below 2% for
+        professional driving [ref 1].
       </P>
       <P>
         COSY was calculated according to the number of seizure-free months after

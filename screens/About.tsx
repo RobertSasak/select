@@ -61,9 +61,9 @@ const About = ({ navigation }: BottomTabScreenProps<'About'>) => (
       </Heading>
       <Li>
         SeLECT was developed and validated in a multicentre registry
-        (SeLECT-registry) of with ischemic stroke. The prediction estimates are
-        continuously updated when new data is added to the international
-        SeLECT-registry.
+        (SeLECT-registry) of patients with ischemic stroke. The prediction
+        estimates are continuously updated when new data is added to the
+        international SeLECT-registry.
       </Li>
       <Li>
         The initial SeLECT 1.0 model had a discrimination (c statistic) of 0.77

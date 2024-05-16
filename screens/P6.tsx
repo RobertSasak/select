@@ -28,7 +28,7 @@ const P6 = ({ navigation }: RootStackScreenProps<'P6'>) => (
         tonic-clonic, status epilepticus, or other according to current ILAE
         definitions. Focal to bilateral tonic-clonic seizures were previously
         known as seizures with “partial onset with secondary generalisation.”
-        Use “Other/Unkown” for other types of bief focal seizures or if the
+        Use “Other/Unkown” for other types of brief focal seizures or if the
         seizure type was not determined.
       </P>
       <P>
