@@ -1,0 +1,50 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "version": "3.0.0",
+    "copyright": "© 2024",
+    "release": {
+      "automaticRelease": true
+    },
+    "info": {
+      "en-GB": {
+        "description": "Risk of late seizures\n\nSeLECT predicts the absolute cumulative risk of late seizures after stroke. Late seizures are defined as spontaneous seizures occurring > 7 days after ischemic stroke. The 95% confidence interval for the risk estimates is given in brackets.\n\nPrediction time\n\nThe user can choose a custom prediction time in months using the slider. The range is between 0 and 60 months.\n\nPrediction graph\n\nThe prediction graph displays Kaplan Meier risk estimates for the calculated SeLECT value. X-axis is time in months, Y-axis is cumulative absolute risk in percent. The dotted line is the 95% confidence interval.",
+        "keywords": [
+          "select score seizure"
+        ],
+        "supportUrl": "https://mgalovic.com",
+        "title": "SeLECT score",
+        "privacyPolicyUrl": "https://mariangalovic.wixsite.com/privacy"
+      }
+    },
+    "categories": [
+      "MEDICAL",
+      "HEALTH_AND_FITNESS"
+    ],
+    "advisory": {
+      "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+      "contests": "NONE",
+      "gamblingSimulated": "NONE",
+      "horrorOrFearThemes": "NONE",
+      "matureOrSuggestiveThemes": "NONE",
+      "medicalOrTreatmentInformation": "FREQUENT_OR_INTENSE",
+      "profanityOrCrudeHumor": "NONE",
+      "sexualContentGraphicAndNudity": "NONE",
+      "sexualContentOrNudity": "NONE",
+      "violenceCartoonOrFantasy": "NONE",
+      "violenceRealistic": "NONE",
+      "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+      "gambling": false,
+      "unrestrictedWebAccess": false,
+      "kidsAgeBand": null,
+      "seventeenPlus": false
+    },
+    "review": {
+      "firstName": "Marian",
+      "lastName": "Galovic",
+      "email": "marian.galovic@gmail.com",
+      "phone": "+41775269280",
+      "demoRequired": false
+    }
+  }
+}
