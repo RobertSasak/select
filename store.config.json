@@ -9,18 +9,14 @@
     "info": {
       "en-GB": {
         "description": "Risk of late seizures\n\nSeLECT predicts the absolute cumulative risk of late seizures after stroke. Late seizures are defined as spontaneous seizures occurring > 7 days after ischemic stroke. The 95% confidence interval for the risk estimates is given in brackets.\n\nPrediction time\n\nThe user can choose a custom prediction time in months using the slider. The range is between 0 and 60 months.\n\nPrediction graph\n\nThe prediction graph displays Kaplan Meier risk estimates for the calculated SeLECT value. X-axis is time in months, Y-axis is cumulative absolute risk in percent. The dotted line is the 95% confidence interval.",
-        "keywords": [
-          "select score seizure"
-        ],
+        "keywords": ["select score seizure"],
         "supportUrl": "https://mgalovic.com",
         "title": "SeLECT score",
-        "privacyPolicyUrl": "https://mariangalovic.wixsite.com/privacy"
+        "privacyPolicyUrl": "https://mariangalovic.wixsite.com/privacy",
+        "releaseNotes": "Improvements and bugfixing"
       }
     },
-    "categories": [
-      "MEDICAL",
-      "HEALTH_AND_FITNESS"
-    ],
+    "categories": ["MEDICAL", "HEALTH_AND_FITNESS"],
     "advisory": {
       "alcoholTobaccoOrDrugUseOrReferences": "NONE",
       "contests": "NONE",
