@@ -3,7 +3,7 @@
     "name": "select",
     "slug": "select",
     "owner": "galovic",
-    "version": "2.2.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "select",
@@ -20,7 +20,10 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "sk.sasak.select"
+      "bundleIdentifier": "sk.sasak.select",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {

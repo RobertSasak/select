@@ -97,7 +97,6 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
       <ScrollView px="5" pb="5">
         <Box safeAreaBottom>
           <Label
-            letter=""
             title="Acute symptomatic seizure"
             subTitle="≤ 7 days after stroke"
             onPress={() => navigation.navigate('P3')}
