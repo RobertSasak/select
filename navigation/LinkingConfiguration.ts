@@ -31,6 +31,15 @@ const linking: LinkingOptions<RootStackParamList> = {
       P7: {
         path: 'day-of-early-seizure',
       },
+      EarlyEEG: {
+        path: 'early-EEG',
+      },
+      RegionalSlowing: {
+        path: 'regional-slowing',
+      },
+      EpileptiformActivity: {
+        path: 'epileptiform-activity',
+      },
       Risk: {
         path: 'risk-of-late-seizures',
       },

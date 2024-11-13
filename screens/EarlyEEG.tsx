@@ -5,7 +5,7 @@ import { RootStackScreenProps } from '../navigation/types'
 import P from '../components/P'
 import B from '../components/B'
 
-const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
+const EarlyEEG = ({ navigation }: RootStackScreenProps<'EarlyEEG'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop pr="50px" alignItems="center">
       <IconButton
@@ -13,19 +13,17 @@ const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
         onPress={() => navigation.navigate('Calculate')}
       />
       <Heading flex={1} textAlign="center" color="white">
-        Timing of acute symptomatic seizure
+        Early EEG
       </Heading>
     </HStack>
     <ScrollView px="5" py="3">
       <P>
-        <B>Day 0</B> refers to seizures occurring on the same day as stroke
-        onset.
-      </P>
-      <P>
-        <B>Day 1</B> refers to the next day after stroke onset.
+        An "early EEG" is an EEG recorded within the first 7 days after stroke
+        over a minimum of 20 minutes (longer recordings recommended for patients
+        with higher <B>NIHSS scores</B> and severe generalized slowing).
       </P>
     </ScrollView>
   </>
 )
 
-export default P7
+export default EarlyEEG

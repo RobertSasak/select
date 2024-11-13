@@ -22,7 +22,7 @@ const P6 = ({ navigation }: RootStackScreenProps<'P6'>) => (
         Type of acute symptomatic seizure
       </Heading>
     </HStack>
-    <ScrollView px="5">
+    <ScrollView px="5" py="3">
       <P>
         Acute symptomatic seizure types are categorised as focal to bilateral
         tonic-clonic, status epilepticus, or other according to current ILAE

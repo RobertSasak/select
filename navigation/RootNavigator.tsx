@@ -15,6 +15,9 @@ import P6 from '../screens/P6'
 import P7 from '../screens/P7'
 import RiskInfo from '../screens/RiskInfo'
 import CosyInfo from '../screens/CosyInfo'
+import EarlyEEG from '../screens/EarlyEEG'
+import RegionalSlowing from '../screens/RegionalSlowing'
+import EpileptiformActivity from '../screens/EpileptiformActivity'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
@@ -29,6 +32,12 @@ const RootNavigator = () => (
       <Stack.Screen name="P5" component={P5} />
       <Stack.Screen name="P6" component={P6} />
       <Stack.Screen name="P7" component={P7} />
+      <Stack.Screen name="EarlyEEG" component={EarlyEEG} />
+      <Stack.Screen name="RegionalSlowing" component={RegionalSlowing} />
+      <Stack.Screen
+        name="EpileptiformActivity"
+        component={EpileptiformActivity}
+      />
       <Stack.Screen name="RiskInfo" component={RiskInfo} />
       <Stack.Screen name="CosyInfo" component={CosyInfo} />
       <Stack.Screen name="Prediction" component={Prediction} />

@@ -21,6 +21,9 @@ export type RootStackParamList = {
   P5: undefined
   P6: undefined
   P7: undefined
+  EarlyEEG: undefined
+  RegionalSlowing: undefined
+  EpileptiformActivity: undefined
   Prediction: NavigatorScreenParams<PredictionTabParamList> & {
     model: Model
     score: number

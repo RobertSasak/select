@@ -1,6 +1,7 @@
 export enum Model {
   SeLECT2,
   SeLECT_ASyS,
+  SeLECT_EEG,
 }
 
 export interface ModelData {

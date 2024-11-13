@@ -3,9 +3,10 @@ import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
 
 import { RootStackScreenProps } from '../navigation/types'
 import P from '../components/P'
-import B from '../components/B'
 
-const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
+const RegionalSlowing = ({
+  navigation,
+}: RootStackScreenProps<'RegionalSlowing'>) => (
   <>
     <HStack bg="primary.500" safeAreaTop pr="50px" alignItems="center">
       <IconButton
@@ -13,19 +14,18 @@ const P7 = ({ navigation }: RootStackScreenProps<'P7'>) => (
         onPress={() => navigation.navigate('Calculate')}
       />
       <Heading flex={1} textAlign="center" color="white">
-        Timing of acute symptomatic seizure
+        Regional Slowing
       </Heading>
     </HStack>
     <ScrollView px="5" py="3">
       <P>
-        <B>Day 0</B> refers to seizures occurring on the same day as stroke
-        onset.
-      </P>
-      <P>
-        <B>Day 1</B> refers to the next day after stroke onset.
+        Regional slowing is defined as focal polymorphic slow activity. This
+        activity can be either continuous or intermittent and consist of
+        polymorphic theta or delta waves at frequencies slower than the
+        background rhythm.
       </P>
     </ScrollView>
   </>
 )
 
-export default P7
+export default RegionalSlowing

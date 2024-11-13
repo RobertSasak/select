@@ -24,7 +24,7 @@ const P5 = ({ navigation }: RootStackScreenProps<'P5'>) => (
         Territory of MCA involvement
       </Heading>
     </HStack>
-    <ScrollView px="5">
+    <ScrollView px="5" py="3">
       <P>
         Territory of MCA involvement is defined as{' '}
         <B>

@@ -32,11 +32,23 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
   const [p6, setP6] = useStatePersist('p6', 0) // Type of acute symptomatic seizure
   const [p7, setP7] = useStatePersist('p7', 0) // Timing of acute symptomatic seizure
   const [p8, setP8] = useStatePersist('p8', 1) // Sex
+  const [earlyEEG, setEarlyEEG] = useStatePersist<Model>(
+    'earlyEEG',
+    Model.SeLECT2
+  )
+  const [regionalSlowing, setRegionalSlowing] = useStatePersist(
+    'regionalSlowing',
+    0
+  )
+  const [epileptiformActivity, setEpileptiformActivity] = useStatePersist(
+    'epileptiformActivity',
+    0
+  )
 
   let score = 0
-  if (p3 === Model.SeLECT2) {
-    score = p1 + p2 + p4 + p5
-  } else {
+  let model: Model
+  if (p3 === Model.SeLECT_ASyS) {
+    model = Model.SeLECT_ASyS
     if (p2 === 1) {
       score += p8
     }
@@ -50,6 +62,12 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
     if (p4 === 2) {
       score += 1
     }
+  } else if (earlyEEG === Model.SeLECT_EEG) {
+    model = Model.SeLECT_EEG
+    score = p1 + p2 + p4 + p5 + regionalSlowing + epileptiformActivity
+  } else {
+    model = Model.SeLECT2
+    score = p1 + p2 + p4 + p5
   }
   return (
     <>
@@ -109,14 +127,65 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             selected={p3}
             onPress={setP3}
           />
-          <Text color="gray.400">
-            If "No" using SeLECT2.0 model, if "Yes" using SeLECT-ASyS model.
-          </Text>
+          <Text color="gray.400">If "Yes" using SeLECT-ASyS model.</Text>
           <Hr />
           <Expand2
             showLeft={p3 === Model.SeLECT2}
             left={
               <>
+                <Label
+                  title="Early EEG"
+                  onPress={() => navigation.navigate('EarlyEEG')}
+                />
+                <Segment
+                  options={[
+                    { label: 'NO', value: Model.SeLECT2 },
+                    { label: 'YES', value: Model.SeLECT_EEG },
+                  ]}
+                  selected={earlyEEG}
+                  onPress={setEarlyEEG}
+                />
+                <Text color="gray.400">
+                  If "No" using SeLECT2.0 model, if "Yes" using SeLECT-EEG
+                  model.
+                </Text>
+                <Hr />
+                <Expand2
+                  showLeft={earlyEEG === Model.SeLECT2}
+                  left={<View />}
+                  right={
+                    <>
+                      <Label
+                        title="Regional slowing"
+                        onPress={() => navigation.navigate('RegionalSlowing')}
+                      />
+                      <Segment
+                        options={[
+                          { label: 'NO', value: 0 },
+                          { label: 'YES', value: 1 },
+                        ]}
+                        selected={regionalSlowing}
+                        onPress={setRegionalSlowing}
+                      />
+                      <Hr />
+                      <Label
+                        title="Epileptiform Activity"
+                        onPress={() =>
+                          navigation.navigate('EpileptiformActivity')
+                        }
+                      />
+                      <Segment
+                        options={[
+                          { label: 'NO', value: 0 },
+                          { label: 'YES', value: 1 },
+                        ]}
+                        selected={epileptiformActivity}
+                        onPress={setEpileptiformActivity}
+                      />
+                      <Hr />
+                    </>
+                  }
+                />
                 <Label
                   title="Severity of stroke"
                   subTitle="NIHSS at admission"
@@ -237,7 +306,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
             leftIcon={<Icon name="calculator" />}
             onPress={() => {
               navigation.navigate('Prediction', {
-                model: p3,
+                model,
                 score,
                 screen: 'Risk',
               })
