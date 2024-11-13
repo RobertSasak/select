@@ -13,6 +13,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#91ac09"
     },
+    "newArchEnabled": true,
     "updates": {
       "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/cc84318e-ccd7-4b4b-9ceb-a65c4361ea7b"
