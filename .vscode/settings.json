@@ -1,0 +1,6 @@
+{
+  "search.exclude": {
+    ".expo": true,
+    "dist": true
+  }
+}

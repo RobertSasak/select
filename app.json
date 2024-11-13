@@ -34,7 +34,8 @@
       "package": "sk.sasak.select"
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {
