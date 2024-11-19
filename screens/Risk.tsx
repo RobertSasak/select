@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import {
   Heading,
   IconButton,
@@ -30,6 +30,7 @@ interface RiskProps {
 }
 
 const Risk: React.FC<RiskProps> = ({ score, model }) => {
+  const line = React.useRef<typeof Line>()
   const [selected, setSelected] = useState(12)
   const navigation = useNavigation()
   const [values, mins, maxs] = useMemo(
@@ -40,6 +41,9 @@ const Risk: React.FC<RiskProps> = ({ score, model }) => {
     ],
     [score]
   )
+  useEffect(() => {
+    line.current?.setTooltipIndex(selected)
+  }, [selected])
   const min = mins[selected].y.toFixed(0)
   const max = maxs[selected].y.toFixed(0)
   const value = values[selected].y.toFixed(0)
@@ -82,6 +86,7 @@ const Risk: React.FC<RiskProps> = ({ score, model }) => {
         />
         <Line
           data={values}
+          ref={line}
           initialTooltipIndex={selected}
           tooltipComponent={
             <Tooltip
