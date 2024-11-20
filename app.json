@@ -45,6 +45,9 @@
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
-    "plugins": ["expo-asset", "expo-font"]
+    "plugins": ["expo-asset", "expo-font"],
+    "experiments": {
+      "baseUrl": "/select"
+    }
   }
 }
