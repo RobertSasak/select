@@ -1,5 +1,12 @@
 import React from 'react'
-import { Heading, HStack, Icon, IconButton, ScrollView } from 'native-base'
+import {
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  ScrollView,
+} from 'native-base'
 
 import { RootStackScreenProps } from '../navigation/types'
 import P from '../components/P'
@@ -33,19 +40,25 @@ const EpileptiformActivity = ({
       </P>
       <Heading>References:</Heading>
       <Li number={1}>
-        Kural MA, Duez L, Hansen VS, et al. Criteria for defining interictal
-        epileptiform discharges in EEG: A clinical validation study. Neurology.
-        2020;94(20):10.
+        <Link href="https://www.neurology.org/doi/full/10.1212/WNL.0000000000009439">
+          Kural MA, Duez L, Hansen VS, et al. Criteria for defining interictal
+          epileptiform discharges in EEG: A clinical validation study.
+          Neurology. 2020;94(20):10.
+        </Link>
       </Li>
       <Li number={2}>
-        Hirsch LJ, Fong MWK, Leitinger M, et al. American Clinical
-        Neurophysiology Society&#39;s Standardized Critical Care EEG
-        Terminology: 2021 Version. J Clin Neurophysiol. Jan 1 2021;38(1):1-29.
+        <Link href="https://journals.lww.com/clinicalneurophys/fulltext/2021/01000/American_Clinical_Neurophysiology_Society_s.1.aspx">
+          Hirsch LJ, Fong MWK, Leitinger M, et al. American Clinical
+          Neurophysiology Society&#39;s Standardized Critical Care EEG
+          Terminology: 2021 Version. J Clin Neurophysiol. Jan 1 2021;38(1):1-29.
+        </Link>
       </Li>
       <Li number={3}>
-        Leitinger M, Trinka E, Gardella E, et al. Diagnostic accuracy of the
-        Salzburg EEG criteria for non-convulsive status epilepticus: a
-        retrospective study. The Lancet Neurology. 2016;15(10):1054-1062.
+        <Link href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(16)30137-5/abstract">
+          Leitinger M, Trinka E, Gardella E, et al. Diagnostic accuracy of the
+          Salzburg EEG criteria for non-convulsive status epilepticus: a
+          retrospective study. The Lancet Neurology. 2016;15(10):1054-1062.
+        </Link>
       </Li>
     </ScrollView>
   </>
