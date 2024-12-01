@@ -14,12 +14,12 @@ import {
   Line,
   HorizontalAxis,
   VerticalAxis,
-  Tooltip,
 } from 'react-native-responsive-linechart'
 
 import { theme } from '../NativeBase'
 import { useNavigation } from '@react-navigation/native'
 import { ModelData } from '../types'
+import Tooltip from '../components/Tooltip'
 
 const primary = theme.colors.primary[500]
 const primary800 = theme.colors.primary[800]
@@ -39,7 +39,7 @@ const Cosy: React.FC<CosyProps> = ({ score, model }) => {
       model.max[score].map((v, i) => ({ x: i, y: v })),
       model.max[score].map((v, i) => ({
         x: i,
-        y: 20 + Math.random() * 0.0001,
+        y: 20 + Math.random() * 0.01,
       })),
     ],
     [score]
@@ -61,9 +61,25 @@ const Cosy: React.FC<CosyProps> = ({ score, model }) => {
       >
         <VerticalAxis
           tickCount={11}
-          theme={{ labels: { formatter: (v) => v.toFixed(0) + '%' } }}
+          theme={{
+            labels: {
+              label: {
+                fontFamily: 'Arial',
+              },
+              formatter: (v) => v.toFixed(0) + '%',
+            },
+          }}
         />
-        <HorizontalAxis tickCount={5} />
+        <HorizontalAxis
+          tickCount={5}
+          theme={{
+            labels: {
+              label: {
+                fontFamily: 'Arial',
+              },
+            },
+          }}
+        />
         <Line
           data={limitPrivate}
           theme={{
@@ -101,15 +117,16 @@ const Cosy: React.FC<CosyProps> = ({ score, model }) => {
               theme={{
                 label: {
                   dy: 20,
+                  fontFamily: 'Arial',
                 },
                 shape: {
-                  dy: 25,
-                  width: 120,
-                  height: 30,
+                  dy: 34,
+                  width: 60,
+                  height: 40,
                   color: 'rgba(0,0,0,.7)',
                 },
                 formatter: ({ x, y }) =>
-                  'Month ' + x + ', ' + y.toFixed(0) + '%',
+                  'Month ' + x + ',' + y.toFixed(0) + '%',
               }}
             />
           }

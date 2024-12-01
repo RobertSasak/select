@@ -193,7 +193,7 @@ const Calculate = ({ navigation }: RootStackScreenProps<'Calculate'>) => {
                 />
                 <Segment
                   options={[
-                    { label: '≤', value: 0 },
+                    { label: '≤3', value: 0 },
                     { label: '4-10', value: 1 },
                     { label: '≥11', value: 2 },
                   ]}

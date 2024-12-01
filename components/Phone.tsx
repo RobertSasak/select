@@ -11,7 +11,12 @@ const Phone = ({ children }: { children: React.ReactNode }) => {
     <View bg="trueGray.300" flex={1}>
       <ImageBackground
         source={require('../assets/images/table.jpg')}
-        style={{ flex: 1 }}
+        resizeMode="cover"
+        style={{
+          flex: 1,
+          width: '100%',
+          height: '100%',
+        }}
       >
         <View
           flex={1}

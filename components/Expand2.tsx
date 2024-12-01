@@ -1,6 +1,6 @@
 import { View } from 'native-base'
 import { useEffect, useRef, useState } from 'react'
-import { Animated } from 'react-native'
+import { Animated, useWindowDimensions } from 'react-native'
 
 interface ExpandProps {
   showLeft: boolean
@@ -12,6 +12,7 @@ const TIME = 400
 const DELAY = 100
 
 const Expand = ({ showLeft, left, right }: ExpandProps) => {
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions()
   const [width, setWidth] = useState<number>(0)
   const [heightLeft, setHeightLeft] = useState<number>(0)
   const [heightRight, setHeightRight] = useState<number>(0)
@@ -24,7 +25,7 @@ const Expand = ({ showLeft, left, right }: ExpandProps) => {
   useEffect(() => {
     height.setValue(newHeight)
     translateX.setValue(newWidth)
-  }, [heightLeft, heightRight])
+  }, [heightLeft, heightRight, screenWidth, screenHeight])
 
   useEffect(() => {
     if (heightLeft < heightRight) {
