@@ -4576,13 +4576,6 @@ expo-pwa@0.0.127:
     commander "2.20.0"
     update-check "1.5.3"
 
-expo-splash-screen@~0.29.13:
-  version "0.29.13"
-  resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.29.13.tgz#2a9083cdb4f7d3e5e4427b625a5249eaae71de7a"
-  integrity sha512-OTaW6v2ErKTlguFDNi4PN+qrEFRA4TIEyFag4204CiFIpAB+13PqQiW4Ovt29aYlLERIjWD++PyoHeSdLSiZwg==
-  dependencies:
-    "@expo/prebuild-config" "^8.0.17"
-
 expo-status-bar@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-2.0.0.tgz#dd99adc2ace12a24c92718cd0f97b93347103393"
@@ -4625,11 +4618,6 @@ expo-updates@~0.26.9:
     fbemitter "^3.0.0"
     ignore "^5.3.1"
     resolve-from "^5.0.0"
-
-expo-web-browser@~14.0.1:
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-14.0.1.tgz#97f3f141b0897364bc8364d90d6e29df0beec8aa"
-  integrity sha512-QM9F3ie+UyIOoBvqFmT6CZojb1vMc2H+7ZlMT5dEu1PL2jtYyOeK2hLfbt/EMt7CBm/w+P29H9W9Y9gdebOkuQ==
 
 expo@~52.0.11:
   version "52.0.14"
