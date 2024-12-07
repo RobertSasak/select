@@ -45,9 +45,6 @@
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
-    "plugins": [],
-    "experiments": {
-      "baseUrl": "/select"
-    }
+    "plugins": []
   }
 }
