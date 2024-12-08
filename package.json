@@ -27,7 +27,6 @@
     "expo-linking": "~7.0.3",
     "expo-status-bar": "~2.0.0",
     "expo-system-ui": "~4.0.5",
-    "expo-updates": "~0.26.10",
     "native-base": "3.4.28",
     "normalize-css-color": "1.0.2",
     "react": "18.3.1",
@@ -55,7 +54,8 @@
           "react-native-responsive-linechart",
           "@expo/webpack-config",
           "normalize-css-color",
-          "use-state-persist"
+          "use-state-persist",
+          "@expo/metro-runtime"
         ]
       }
     }
